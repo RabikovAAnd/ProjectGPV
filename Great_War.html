@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women in WWII Information Security</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
+    header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+    nav { display: flex; justify-content: center; background: #34495e; flex-wrap: wrap; }
+    nav a {
+      color: white; padding: 14px 20px; text-decoration: none;
+      display: inline-block;
+    }
+    nav a:hover { background: #1abc9c; }
+    section { padding: 20px; display: none; }
+    section.active { display: block; }
+    img { max-width: 100%; height: auto; margin-top: 10px; }
+    form { margin-top: 20px; }
+    input, textarea { width: 100%; padding: 10px; margin: 5px 0; }
+    button { background: #2c3e50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+  </style>
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.onload = () => showTab('summary');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Women in WWII: Information Security on the Soviet Front</h1>
+    <p>Presented by Ryabikov Andrey, Group EU-211</p>
+  </header>
+  <nav>
+    <a href="#" onclick="showTab('summary')">Home</a>
+    <a href="#" onclick="showTab('signalers')">Women Signalers</a>
+    <a href="#" onclick="showTab('cryptographers')">Female Cryptographers</a>
+    <a href="#" onclick="showTab('training')">Training and Discipline</a>
+    <a href="#" onclick="showTab('legacy')">Significance and Legacy</a>
+    <a href="#" onclick="showTab('sources')">Sources & Feedback</a>
+  </nav>
+
+  <section id="summary" class="active">
+    <h2>Summary</h2>
+    <p>This website presents a comprehensive report on the critical role Soviet women played as signalers and cryptographers during the Great Patriotic War. Their work was vital to maintaining secure communications, protecting classified information, and ensuring successful military operations. Women performed under extreme conditions — laying communication lines on the battlefield, decoding enemy messages, and supporting intelligence operations. Through discipline, courage, and skill, they became the silent protectors of the front's information security.</p>
+  </section>
+
+  <section id="signalers">
+    <h2>Women Signalers on the Front Lines</h2>
+    <p>Female signalers were integral to the Soviet military communication system. They worked on telegraphs, operated field telephones, maintained radio contact, and laid down kilometers of wire under constant threat of shelling and sniper fire. Despite the harsh conditions, they performed their duties with unwavering dedication.
+    <br><br>
+    These women ensured uninterrupted communication between headquarters and military units. Many were stationed on the front lines or worked with partisans behind enemy lines. One of the most well-known heroines was <a href="https://en.wikipedia.org/wiki/Zoya_Kosmodemyanskaya" target="_blank">Zoya Kosmodemyanskaya</a>, who was captured and executed while on a sabotage mission. Thousands of other young women, whose names are less known, also made significant contributions, risking their lives daily to maintain communication under fire.
+    <br><br>
+    Signalers often operated without rest, exposed to harsh weather, noise, and danger. Their resilience and technical skill enabled successful coordination of offensives and logistics throughout the war.
+    </p>
+    <img src="scale_1200.png" alt="Zoya Kosmodemyanskaya">
+  </section>
+
+  <section id="cryptographers">
+    <h2>Female Cryptographers: The Invisible Front</h2>
+    <p>Female cryptographers operated in complete secrecy. Their task was to encode and decode sensitive military communications, ensuring that commands, reconnaissance data, and frontline updates could not be intercepted by enemy intelligence. The psychological and intellectual demands of their work were extremely high.
+    <br><br>
+    These women worked in the General Staff, the NKVD, and in field command posts. They had to be precise, quick-thinking, and absolutely reliable. Even a single decoding error could result in lost lives or compromised operations. Many cryptographers remained anonymous throughout and after the war, their roles hidden due to strict confidentiality.
+    <br><br>
+    They worked long hours in bunkers, mobile units, and command centers, using cipher machines and manual encryption techniques. The stability of Soviet information networks would have been impossible without their silent and exacting work.
+    </p>
+    <img src="scale_1201.png" alt="Soviet Cryptographer">
+  </section>
+
+  <section id="training">
+    <h2>Training and Discipline</h2>
+    <p>The training process for female signalers and cryptographers was rigorous. Most underwent specialized military courses or attended communication schools. They studied Morse code, signal transmission, encryption systems, and technical equipment such as telegraph and radio apparatus.
+    <br><br>
+    In addition to technical proficiency, trainees were taught strict security protocols. They learned to work without revealing any information about their tasks — not even to family. Discipline was paramount: failure to follow encryption protocol or compromise of data could be considered a betrayal of the nation.
+    <br><br>
+    Many of the women were young volunteers, Komsomol members, or recent graduates. After training, they were immediately deployed to active service, where they had to apply their knowledge in harsh, unpredictable, and often life-threatening environments. The discipline, precision, and sense of duty instilled during their training remained with them for life.
+    </p>
+  </section>
+
+  <section id="legacy">
+    <h2>Significance and Legacy</h2>
+    <p>The contributions of these women to Soviet military success remained unacknowledged for many years. Only with the opening of wartime archives and the publication of personal accounts did their roles gain recognition. Today, many of them are remembered through museum exhibitions, documentaries, and veteran memorials.
+    <br><br>
+    The legacy of Soviet female cryptographers and signalers is not only one of bravery but also of professionalism and unwavering service to their country. Their work helped protect military secrets, maintain command stability, and ensure operational success in a time of immense uncertainty and danger.
+    <br><br>
+    Their example continues to inspire modern communication and cybersecurity professionals, particularly women entering the field. Their sacrifices and excellence underscore the critical importance of information security in both wartime and peace.
+    </p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources & Feedback</h2>
+    <ul>
+      <li>Borisov, V. P. *Women of the Great Patriotic War*, Moscow: Voenizdat, 1985</li>
+      <li><a href="http://www.rustelecom-museum.ru" target="_blank">A. S. Popov Museum of Communications</a></li>
+      <li>Military-Historical Journal, 2010–2020</li>
+      <li><a href="https://pamyat-naroda.ru" target="_blank">Pamyat Naroda Project</a></li>
+      <li><a href="https://histrf.ru" target="_blank">History of Russia portal</a></li>
+      <li>Russian State Military Archive (RGVA)</li>
+    </ul>
+
+    <h3>Ask a Question</h3>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <label for="name">Your Name:</label>
+      <input type="text" name="name" required>
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" required>
+      <label for="question">Your Question:</label>
+      <textarea name="question" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</body>
+</html>
