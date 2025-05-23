@@ -65,15 +65,16 @@
       padding: 25px;
       max-width: 1200px;
       margin: 0 auto;
+      display: none;
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.5s ease;
     }
     
     section.active {
+      display: block;
       opacity: 1;
       transform: translateY(0);
-      display: block;
     }
     
     h2 {
@@ -208,8 +209,6 @@
   <section id="summary" class="active">
     <h2><i class="fas fa-info-circle"></i> Summary</h2>
     <p>This website presents a comprehensive report on the critical role Soviet women played as signalers and cryptographers during the Great Patriotic War. Their work was vital to maintaining secure communications, protecting classified information, and ensuring successful military operations. Women performed under extreme conditions — laying communication lines on the battlefield, decoding enemy messages, and supporting intelligence operations. Through discipline, courage, and skill, they became the silent protectors of the front's information security.</p>
-    
-    
   </section>
 
   <section id="signalers">
@@ -273,8 +272,6 @@
     <p>The legacy of Soviet female cryptographers and signalers is not only one of bravery but also of professionalism and unwavering service to their country. Their work helped protect military secrets, maintain command stability, and ensure operational success in a time of immense uncertainty and danger.</p>
     
     <p>Their example continues to inspire modern communication and cybersecurity professionals, particularly women entering the field. Their sacrifices and excellence underscore the critical importance of information security in both wartime and peace.</p>
-    
-    
   </section>
 
   <section id="sources">
@@ -345,18 +342,27 @@
       });
     }
     
-    // Back to top button
-    window.onscroll = function() {
+    // Back to top button functionality
+    document.getElementById('backToTop').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Back to top button visibility
+    window.addEventListener('scroll', function() {
       const backToTop = document.getElementById('backToTop');
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         backToTop.classList.add('visible');
       } else {
         backToTop.classList.remove('visible');
       }
-    };
+    });
     
-    // Initialize first tab
-    window.onload = function() {
+    // Initialize page when loaded
+    window.addEventListener('DOMContentLoaded', function() {
+      // Show summary tab by default
       showTab('summary');
       
       // Form submission handler
@@ -365,57 +371,7 @@
         alert('Thank you for your question! We will respond soon.');
         this.reset();
       });
-    };
-    window.onload = function() {
-      showTab('signalers');
-      
-      // Form submission handler
-      document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your question! We will respond soon.');
-        this.reset();
-      });
-    };
-    window.onload = function() {
-      showTab('cryptographers');
-      
-      // Form submission handler
-      document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your question! We will respond soon.');
-        this.reset();
-      });
-    };
-    window.onload = function() {
-      showTab('training');
-      
-      // Form submission handler
-      document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your question! We will respond soon.');
-        this.reset();
-      });
-    };
-    window.onload = function() {
-      showTab('legacy');
-      
-      // Form submission handler
-      document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your question! We will respond soon.');
-        this.reset();
-      });
-    };
-    window.onload = function() {
-      showTab('sources');
-      
-      // Form submission handler
-      document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your question! We will respond soon.');
-        this.reset();
-      });
-    };
+    });
   </script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
